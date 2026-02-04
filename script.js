@@ -332,7 +332,8 @@ if (paymentForm) {
 
       // Send to backend
       try {
-        const response = await fetch('http://localhost:3000/api/booking', {
+        const apiUrl = `https://0ec90b57d6e95fcbda19832f.supabase.co/functions/v1/mario-hotel/booking`;
+        const response = await fetch(apiUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
@@ -381,7 +382,8 @@ if (contactForm) {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('http://localhost:3000/api/contact', {
+      const apiUrl = `https://0ec90b57d6e95fcbda19832f.supabase.co/functions/v1/mario-hotel/contact`;
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

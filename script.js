@@ -342,7 +342,7 @@ if (paymentForm) {
 
         if (result.success) {
           modal.classList.add('hidden');
-          alert(`התשלום בוצע בהצלחה! ✅\n\nסכום: ₪${bookingData.totalPrice.toLocaleString()}\nאישור הזמנה נשלח לכתובת: ${guestEmail}`);
+          alert('התשלום בוצע בהצלחה וקבלה נשלחה למייל');
 
           // Reset forms
           document.getElementById('search-form').reset();

@@ -550,6 +550,89 @@ section {
   }
 }
 
+/* ---------------------------------------------------
+   Credit Card Form Styling
+   --------------------------------------------------- */
+.credit-card-form {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.credit-card-form .form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.credit-card-form input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.credit-card-form input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.credit-card-form input.error {
+  border-color: var(--color-error);
+  animation: shake 0.3s;
+}
+
+.card-type-icons {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.card-type-icons i {
+  transition: opacity 0.3s;
+}
+
+#pay-button {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-hover) 100%);
+  color: var(--color-navy);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+#pay-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+#pay-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -566,5 +649,9 @@ section {
   .booking-section {
     margin-top: 2rem;
     padding: 1.5rem;
+  }
+
+  .credit-card-form {
+    padding: 1rem;
   }
 }

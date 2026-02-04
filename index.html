@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מלון מריו | Mario Hotel Luxury Resort</title>
+    <meta name="description" content="מלון מריו – המקום שבו יוקרה פוגשת את הים. חוויה בלתי נשכחת של שירות ברמה עולמית.">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">MARIO HOTEL <i class="fa-solid fa-crown"></i></div>
+        <ul class="nav-links">
+            <li><a href="#home">בית</a></li>
+            <li><a href="#booking">הזמנה</a></li>
+            <li><a href="#rooms">סוויטת</a></li>
+            <li><a href="#facilities">מתקנים</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+        </ul>
+        <div class="mobile-menu" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1920&auto=format&fit=crop"
+                alt="Mario Hotel Luxury Lobby" />
+        </div>
+        <div class="hero-content">
+            <div class="logo-large">MARIO <br> HOTEL</div>
+            <p class="subtitle">יוקרה. שקט. חוויה של פעם בחיים.</p>
+            <a href="#booking" class="cta-button">גלה את החוויה</a>
+        </div>
+    </header>
+
+    <!-- Booking Section (Search) -->
+    <section id="booking" class="booking-section-wrapper">
+        <div class="booking-section">
+            <form id="search-form" class="booking-form">
+                <div class="form-group">
+                    <label><i class="fa-regular fa-calendar"></i> צ'ק-אין</label>
+                    <input type="date" id="checkin" required min="2023-01-01" />
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-regular fa-calendar-check"></i> צ'ק-אאוט</label>
+                    <input type="date" id="checkout" required />
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-user-group"></i> אורחים</label>
+                    <select id="guests">
+                        <option value="1">1 מבוגר</option>
+                        <option value="2" selected>2 מבוגרים</option>
+                        <option value="3">משפחה (2+2)</option>
+                    </select>
+                </div>
+                <button type="submit" class="booking-btn">חפש חדרים פנויים</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">הסיפור שלנו</h2>
+        <p class="section-subtitle">אירוח בסטנדרט בינלאומי</p>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; color: #a8b2d1;">
+            <p>מלון מריו הוא יותר מסתם מקום לישון בו. זהו המפלט שלכם מהשגרה. ממוקם על רצועת חוף פרטית, אנו מציעים שילוב
+                נדיר של טבע פראי ופינוק אינסופי.</p>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms">
+        <h2 class="section-title">הסוויטות שלנו</h2>
+        <p class="section-subtitle">בחר את הממלכה שלך</p>
+
+        <div class="rooms-grid">
+            <!-- Room 1 -->
+            <article class="room-card" data-name="הסוויטה המלכותית" data-price="1200">
+                <div class="room-image">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&auto=format&fit=crop"
+                        alt="Royal Suite">
+                </div>
+                <div class="room-details">
+                    <h3>הסוויטה המלכותית</h3>
+                    <span class="price">₪1,200 <small>/לילה</small></span>
+                    <div class="features">
+                        <span><i class="fa-solid fa-wifi"></i> WiFi</span>
+                        <span><i class="fa-solid fa-water"></i> נוף לים</span>
+                        <span><i class="fa-solid fa-martini-glass"></i> מיני-בר</span>
+                    </div>
+                    <button class="booking-btn small book-now-btn">שריין חדר זה</button>
+                </div>
+            </article>
+
+            <!-- Room 2 -->
+            <article class="room-card" data-name="חדר דלוקס גן" data-price="850">
+                <div class="room-image">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop"
+                        alt="Deluxe Room">
+                </div>
+                <div class="room-details">
+                    <h3>חדר דלוקס גן</h3>
+                    <span class="price">₪850 <small>/לילה</small></span>
+                    <div class="features">
+                        <span><i class="fa-solid fa-tree"></i> גינה פרטית</span>
+                        <span><i class="fa-solid fa-bed"></i> קינג סייז</span>
+                        <span><i class="fa-solid fa-bath"></i> ג'קוזי</span>
+                    </div>
+                    <button class="booking-btn small book-now-btn">שריין חדר זה</button>
+                </div>
+            </article>
+
+            <!-- Room 3 -->
+            <article class="room-card" data-name="פנטהאוז מריו" data-price="2500">
+                <div class="room-image">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800&auto=format&fit=crop"
+                        alt="Penthouse">
+                </div>
+                <div class="room-details">
+                    <h3>פנטהאוז מריו</h3>
+                    <span class="price">₪2,500 <small>/לילה</small></span>
+                    <div class="features">
+                        <span><i class="fa-solid fa-infinity"></i> בריכה פרטית</span>
+                        <span><i class="fa-solid fa-star"></i> שירות VIP</span>
+                    </div>
+                    <button class="booking-btn small book-now-btn">שריין חדר זה</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Facilities / Gallery Peek -->
+    <section id="facilities" style="background: var(--color-navy-light);">
+        <h2 class="section-title">חווית האירוח</h2>
+        <div class="rooms-grid">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=600&auto=format&fit=crop"
+                style="border-radius:8px;" alt="Pool">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop"
+                style="border-radius:8px;" alt="Chef Restaurant">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop"
+                style="border-radius:8px;" alt="Spa">
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>סיום הזמנה ותשלום</h2>
+            <div id="order-summary" class="order-summary">
+                <!-- Summary populated by JS -->
+            </div>
+
+            <form id="payment-form" class="contact-form">
+                <h3>פרטי אורח</h3>
+                <div class="form-group">
+                    <label>שם מלא</label>
+                    <input type="text" id="guest-name" required placeholder="ישראל ישראלי">
+                </div>
+                <div class="form-group">
+                    <label>אימייל לקבלה</label>
+                    <input type="email" id="guest-email" required placeholder="email@example.com">
+                </div>
+
+                <!-- PayPal Button Container -->
+                <div id="paypal-button-container" style="margin-top: 20px;"></div>
+                <p style="font-size:0.8rem; color:#888; text-align:center; margin-top:10px;">התשלום מאובטח באמצעות
+                    PayPal</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">צור קשר</h2>
+        <div class="booking-section" style="margin-top:0; box-shadow:none; background:transparent;">
+            <form id="contact-form" class="booking-form" style="grid-template-columns: 1fr;">
+                <div class="form-group">
+                    <label>שם מלא</label>
+                    <input type="text" name="name" required />
+                </div>
+                <div class="form-group">
+                    <label>אימייל</label>
+                    <input type="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label>הודעה</label>
+                    <input type="text" name="message" style="height: 100px;" required />
+                </div>
+                <button type="submit" class="booking-btn">שלח הודעה</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="logo">MARIO HOTEL</div>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="copyright">© 2026 כל הזכויות שמורות למלון מריו</p>
+    </footer>
+
+    <!-- PayPal SDK (Live) -->
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AVGOhyN5lYSOaHPUzC9DWDsLetJfvvJIyjNuzMPrqCHtGjN9OoQi9946No89rmlDAE2jFii_wNzEsuQl&currency=ILS&enable-funding=venmo"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
